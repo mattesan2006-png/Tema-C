@@ -1,0 +1,165 @@
+1. while
+
+Repite mientras la condición sea verdadera.
+
+Sintaxis
+
+while (condicion) {
+
+}
+
+Ejemplo:
+
+int i = 1;
+
+while (i <= 5) {
+    printf("%d\n", i);
+    i++;
+}
+
+Flujo:
+1.verifica condición
+2.ejecuta bloque
+3.vuelve a verificar
+4.termina cuando da falso
+
+2. do-while
+
+Muy parecido a while, pero ejecuta al menos una vez.
+
+Sintaxis
+
+do {
+
+} while (condicion);
+Diferencia clave
+while → primero pregunta
+do-while → primero ejecuta
+
+Ejemplo:
+
+int i = 1;
+
+do {
+    printf("%d\n", i);
+    i++;
+} while (i <= 5);
+Ejemplo donde se nota la diferencia
+int i = 10;
+
+while (i < 5) {
+    printf("Hola");
+}
+
+No imprime nada.
+
+Pero:
+
+int i = 10;
+
+do {
+    printf("Hola");
+} while (i < 5);
+
+Imprime una vez.
+
+3.for
+
+Es otro ciclo, más cómodo cuando sabés cuántas veces repetir.
+
+Sintaxis:
+
+for (inicio; condicion; incremento) {
+
+}
+
+Ejemplo:
+
+for (int i = 1; i <= 5; i++) {
+    printf("%d\n", i);
+}
+
+Cómo funciona:
+
+for (int i = 1; i <= 5; i++)
+Parte 1
+int i = 1
+
+Se ejecuta una vez.
+
+Parte 2:
+
+i <= 5
+
+Condición.
+
+Parte 3:
+
+i++
+
+Incremento después de cada vuelta.
+
+4.Comparación while vs for
+
+While:
+
+int i = 1;
+
+while (i <= 5) {
+    printf("%d", i);
+    i++;
+}
+
+For:
+
+for (int i = 1; i <= 5; i++) {
+    printf("%d", i);
+}
+
+El for queda más compacto.
+
+5. Contadores y acumuladores
+
+Se usan muchísimo en ciclos.
+
+Contador:
+
+Cuenta cuántas veces pasa algo.
+
+contador++;
+
+Ejemplo:
+
+int contador = 0;
+
+contador++;
+contador++;
+
+Termina valiendo 2.
+
+Acumulador:
+
+Va sumando valores.
+
+acumulador = acumulador + valor;
+
+Ejemplo:
+
+int suma = 0;
+
+suma = suma + 5;
+suma = suma + 3;
+
+Resultado: 8.
+
+6. Variables de control
+
+Son las variables que controlan los ciclos.
+
+Ejemplo:
+
+for (int i = 0; i < 10; i++)
+
+La variable de control es:
+
+i
