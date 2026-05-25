@@ -1,0 +1,124 @@
+1. Structs:
+
+¿Qué es un struct?
+
+Un struct permite agrupar variables diferentes.
+
+Ejemplo:
+- nombre
+- edad
+- altura
+
+todo junto.
+
+---
+
+Sintaxis:
+
+struct Persona {
+
+    char nombre[20];
+    int edad;
+    float altura;
+
+};
+
+Crear variable struct:
+struct Persona p1;
+
+Asignar valores:
+p1.edad = 20;
+p1.altura = 1.75;
+
+Acceder a campos:
+printf("%d", p1.edad);
+
+Structs y arrays:
+struct Persona personas[10];
+
+Muy usado.
+
+2. Listas
+
+¿Qué es una lista?
+
+Una lista enlazada es una estructura dinámica.
+
+A diferencia de los arrays:
+
+_puede crecer
+_puede reducirse
+
+Nodo:
+
+La lista está formada por nodos.
+
+Cada nodo tiene:
+
+_dato
+_puntero al siguiente
+
+Visualmente:
+[5 | * ] → [8 | * ] → [2 | NULL]
+
+Nodo en C:
+
+struct Nodo {
+
+    int dato;
+    struct Nodo* siguiente;
+
+};
+
+Explicación:
+
+int dato;
+
+Guarda información.
+
+struct Nodo* siguiente;
+
+Guarda la dirección del próximo nodo.
+
+NULL:
+
+Significa:
+
+_no apunta a nada
+_fin de la lista
+
+Crear nodos:
+struct Nodo n1;
+struct Nodo n2;
+
+Conectar nodos:
+n1.siguiente = &n2;
+n2.siguiente = NULL;
+
+Ejemplo visual:
+n1 → n2 → NULL
+
+Diferencia entre arrays y listas:
+
+Arrays	             Listas
+tamaño fijo	         tamaño dinámico
+acceso rápido	       acceso secuencial
+simples	             más flexibles
+
+Concepto importante:
+
+Las listas usan muchísimo:
+
+_punteros
+_memoria dinámica
+_structs
+
+Error común:
+struct Nodo siguiente;
+
+Esto genera problemas.
+
+Correcto:
+struct Nodo* siguiente;
+
+Porque debe guardar una dirección.
