@@ -1,43 +1,17 @@
-1. ¿Qué es C?
+# 01 - Introducción
 
-Programming El lenguaje C es un lenguaje:
+## ¿Qué es C?
 
-_compilado
-_rápido
-_de bajo nivel comparado con otros
-_muy usado para sistemas operativos, drivers y programación eficiente
+C es un lenguaje:
 
-Todo programa en C normalmente empieza así:
+* compilado
+* rápido
+* eficiente
+* muy usado en sistemas operativos y programación de bajo nivel
 
-#include <stdio.h>
+## Programa básico
 
-int main() {
-    
-    return 0;
-}
-
-Qué significa cada parte
-
-#include <stdio.h>
-
-Incluye la librería estándar de entrada y salida (printf, scanf, etc).
-
-int main()
-
-Es la función principal del programa. Ahí empieza la ejecución.
-
-return 0;
-
-Indica que el programa terminó correctamente.
-
-2. Mostrar texto (printf)
-
-Para imprimir en pantalla:
-
-printf("Hola mundo");
-
-Ejemplo:
-
+```c
 #include <stdio.h>
 
 int main() {
@@ -46,29 +20,24 @@ int main() {
 
     return 0;
 }
+```
 
-\n
+## Partes importantes
 
-Hace un salto de línea.
-
-3. Entrada de datos (scanf)
-
-Sirve para leer datos del usuario.
-
-scanf("%d", &edad);
-
-Ejemplo:
-
+```c
 #include <stdio.h>
+```
 
-int main() {
+Incluye funciones estándar.
 
-    int edad;
+```c
+int main()
+```
 
-    printf("Ingrese su edad: ");
-    scanf("%d", &edad);
+Función principal.
 
-    printf("Tu edad es %d\n", edad);
+```c
+return 0;
+```
 
-    return 0;
-}
+Indica final correcto.
