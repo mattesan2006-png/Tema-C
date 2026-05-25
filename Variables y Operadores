@@ -1,0 +1,57 @@
+1. Variables
+
+Una variable guarda datos.
+
+Tipos básicos:
+
+ Tipo	   Guarda
+ int	   enteros
+ float	 decimales
+ char	   un carácter
+
+Ejemplos:
+int edad = 18;
+float altura = 1.75;
+char letra = 'A';
+
+2.Formatos importantes:
+
+Formato	  Tipo
+%d	      int
+%f	      float
+%c	      char
+
+El &
+
+Se usa porque scanf necesita la dirección de memoria de la variable.
+
+3. Operadores Aritméticos
+
+Operador	  Significado
+   +	         suma
+   -	         resta
+   *	         multiplicación
+   /	         división
+   %	         resto
+
+Ejemplo:
+
+int resto = 10 % 3;
+
+Da 1.
+
+3. Comparaciones
+
+Devuelven verdadero o falso.
+
+Operador	     Significado
+  ==	            igual
+  !=	            distinto
+  >	              mayor
+  <	              menor
+  >=	            mayor o igual
+  <=	            menor o igual
+
+Ejemplo:
+
+edad >= 18
