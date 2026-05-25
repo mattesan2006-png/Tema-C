@@ -48,21 +48,7 @@ else {
     printf("Desaprobado");
 }
 
-4. Anidación
-
-Es poner estructuras dentro de otras.
-
-If dentro de if:
-
-if (edad >= 18) {
-
-    if (tieneDNI == 1) {
-        printf("Puede entrar");
-    }
-
-}
-
-5. Bandera (flag)
+4. Bandera (flag)
 
 Es una variable usada para recordar algo.
 
