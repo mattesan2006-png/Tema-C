@@ -163,3 +163,39 @@ for (int i = 0; i < 10; i++)
 La variable de control es:
 
 i
+
+7. Anidación
+
+Es poner estructuras dentro de otras.
+
+If dentro de if:
+
+if (edad >= 18) {
+
+    if (tieneDNI == 1) {
+        printf("Puede entrar");
+    }
+
+}
+
+For dentro de for:
+
+Muy usado para matrices después.
+
+for (int i = 1; i <= 3; i++) {
+
+    for (int j = 1; j <= 2; j++) {
+        printf("%d %d\n", i, j);
+    }
+
+}
+
+Cómo se ejecuta:
+
+i=1
+  j=1
+  j=2
+
+i=2
+  j=1
+  j=2
