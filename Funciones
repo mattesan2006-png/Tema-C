@@ -1,0 +1,141 @@
+Funciones
+
+¿Qué es una función?
+
+Una función es un bloque de código reutilizable.
+
+Sirve para:
+- organizar programas
+- evitar repetir código
+- dividir problemas grandes
+
+---
+
+Función básica:
+
+void saludar() {
+
+    printf("Hola\n");
+
+}
+
+Llamar función:
+saludar();
+
+Estructura:
+
+tipo nombre(parametros) {
+
+}
+
+Función con parámetros:
+
+void mostrarNumero(int n) {
+
+    printf("%d\n", n);
+
+}
+
+Uso:
+
+mostrarNumero(5);
+
+Parámetros:
+Los parámetros son variables que recibe la función.
+
+int a
+int b
+
+Ejemplo:
+
+void sumar(int a, int b) {
+
+    printf("%d", a + b);
+
+}
+
+Función con retorno:
+
+int sumar(int a, int b) {
+
+    return a + b;
+
+}
+
+Uso:
+
+int resultado = sumar(3, 4);
+return
+return valor;
+
+Devuelve un resultado.
+
+void
+
+Significa:
+"no devuelve nada"
+
+void mostrarMensaje()
+
+Prototipos:
+Sirven para declarar funciones antes del main.
+
+int sumar(int a, int b);
+
+Ejemplo completo:
+
+#include <stdio.h>
+
+int sumar(int a, int b);
+
+int main() {
+
+    int resultado = sumar(2, 3);
+
+    printf("%d", resultado);
+
+    return 0;
+}
+
+int sumar(int a, int b) {
+
+    return a + b;
+
+}
+
+Variables locales:
+Las variables creadas dentro de una función existen solo ahí.
+
+void prueba() {
+
+    int x = 5;
+
+}
+
+Fuera de la función:
+
+x
+
+no existe.
+
+Ventajas de funciones
+_reutilización
+_código más limpio
+_más fácil de mantener
+_programas grandes más organizados
+
+Error común
+
+Olvidar retornar en funciones que devuelven algo.
+
+Incorrecto:
+
+int sumar(int a, int b) {
+
+    int r = a + b;
+
+}
+
+Correcto:
+
+return r;
