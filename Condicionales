@@ -1,0 +1,86 @@
+1.if
+
+Ejecuta código solo si la condición es verdadera.
+
+if (condicion) {
+
+}
+
+Ejemplo:
+
+int edad = 20;
+
+if (edad >= 18) {
+    printf("Mayor de edad");
+}
+
+2. if-else
+
+Permite elegir entre dos caminos.
+
+if (condicion) {
+
+} else {
+
+}
+
+Ejemplo:
+
+int numero = 5;
+
+if (numero % 2 == 0) {
+    printf("Par");
+} else {
+    printf("Impar");
+}
+
+3. else if
+
+Para múltiples condiciones.
+
+if (nota >= 8) {
+    printf("Muy bien");
+}
+else if (nota >= 6) {
+    printf("Aprobado");
+}
+else {
+    printf("Desaprobado");
+}
+
+4. Anidación
+
+Es poner estructuras dentro de otras.
+
+If dentro de if:
+
+if (edad >= 18) {
+
+    if (tieneDNI == 1) {
+        printf("Puede entrar");
+    }
+
+}
+
+5. Bandera (flag)
+
+Es una variable usada para recordar algo.
+
+Generalmente:
+
+0 → falso
+1 → verdadero
+
+Ejemplo:
+
+int encontrado = 0;
+
+Si se encuentra algo:
+
+encontrado = 1;
+
+Uso típico:
+
+if (numero == buscado) {
+    encontrado = 1;
+}
