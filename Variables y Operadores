@@ -17,9 +17,9 @@ char letra = 'A';
 2.Formatos importantes:
 
 Formato	  Tipo
-%d	      int
-%f	      float
-%c	      char
+%d	       int
+%f	       float
+%c	       char
 
 El &
 
@@ -56,7 +56,18 @@ Ejemplo:
 
 edad >= 18
 
-4. Incremento y decremento
+4. Operadores lógicos:
+
+Operador	    Significado
+   &&	            Y
+   `	
+   !	           NOT
+
+Ejemplo:
+
+if (edad >= 18 && edad <= 30)
+
+5. Incremento y decremento
 
 i++;
 
