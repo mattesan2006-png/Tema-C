@@ -55,3 +55,19 @@ Operador	     Significado
 Ejemplo:
 
 edad >= 18
+
+4. Incremento y decremento
+
+i++;
+
+equivale a:
+
+i = i + 1;
+
+También:
+
+i--;
+
+equivale a:
+
+i = i - 1;
