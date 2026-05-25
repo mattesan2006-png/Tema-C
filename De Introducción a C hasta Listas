@@ -1,0 +1,759 @@
+1. ¿Qué es C?
+
+Programming El lenguaje C es un lenguaje:
+
+_compilado
+_rápido
+_de bajo nivel comparado con otros
+_muy usado para sistemas operativos, drivers y programación eficiente
+
+Todo programa en C normalmente empieza así:
+
+#include <stdio.h>
+
+int main() {
+    
+    return 0;
+}
+
+Qué significa cada parte
+
+#include <stdio.h>
+
+Incluye la librería estándar de entrada y salida (printf, scanf, etc).
+
+int main()
+
+Es la función principal del programa. Ahí empieza la ejecución.
+
+return 0;
+
+Indica que el programa terminó correctamente.
+
+2. Mostrar texto (printf)
+
+Para imprimir en pantalla:
+
+printf("Hola mundo");
+
+Ejemplo:
+
+#include <stdio.h>
+
+int main() {
+
+    printf("Hola mundo\n");
+
+    return 0;
+}
+
+\n
+
+Hace un salto de línea.
+
+3. Variables
+
+Una variable guarda datos.
+
+Tipos básicos:
+ Tipo	   Guarda
+ int	   enteros
+ float	 decimales
+ char	   un carácter
+
+Ejemplos:
+
+int edad = 18;
+float altura = 1.75;
+char letra = 'A';
+
+4. Entrada de datos (scanf)
+
+Sirve para leer datos del usuario.
+
+scanf("%d", &edad);
+
+Ejemplo:
+
+#include <stdio.h>
+
+int main() {
+
+    int edad;
+
+    printf("Ingrese su edad: ");
+    scanf("%d", &edad);
+
+    printf("Tu edad es %d\n", edad);
+
+    return 0;
+}
+
+Formatos importantes:
+
+Formato	  Tipo
+%d	      int
+%f	      float
+%c	      char
+
+El &
+
+Se usa porque scanf necesita la dirección de memoria de la variable.
+
+5. Operadores
+Aritméticos
+
+Operador	  Significado
+   +	         suma
+   -	         resta
+   *	         multiplicación
+   /	         división
+   %	         resto
+
+Ejemplo:
+
+int resto = 10 % 3;
+
+Da 1.
+
+6. Comparaciones
+
+Devuelven verdadero o falso.
+
+Operador	     Significado
+  ==	            igual
+  !=	            distinto
+  >	              mayor
+  <	              menor
+  >=	            mayor o igual
+  <=	            menor o igual
+
+Ejemplo:
+
+edad >= 18
+
+7. if
+
+Ejecuta código solo si la condición es verdadera.
+
+if (condicion) {
+
+}
+
+Ejemplo:
+
+int edad = 20;
+
+if (edad >= 18) {
+    printf("Mayor de edad");
+}
+
+8. if-else
+
+Permite elegir entre dos caminos.
+
+if (condicion) {
+
+} else {
+
+}
+
+Ejemplo:
+
+int numero = 5;
+
+if (numero % 2 == 0) {
+    printf("Par");
+} else {
+    printf("Impar");
+}
+
+9. else if
+
+Para múltiples condiciones.
+
+if (nota >= 8) {
+    printf("Muy bien");
+}
+else if (nota >= 6) {
+    printf("Aprobado");
+}
+else {
+    printf("Desaprobado");
+}
+
+10. Operadores lógicos:
+
+Operador	    Significado
+   &&	            Y
+   `	
+   !	           NOT
+
+Ejemplo:
+
+if (edad >= 18 && edad <= 30)
+
+11. while
+
+Repite mientras la condición sea verdadera.
+
+Sintaxis
+
+while (condicion) {
+
+}
+
+Ejemplo:
+
+int i = 1;
+
+while (i <= 5) {
+    printf("%d\n", i);
+    i++;
+}
+
+Flujo:
+1.verifica condición
+2.ejecuta bloque
+3.vuelve a verificar
+4.termina cuando da falso
+
+12. Incremento y decremento
+
+i++;
+
+equivale a:
+
+i = i + 1;
+
+También:
+
+i--;
+
+equivale a:
+
+i = i - 1;
+
+13. do-while
+
+Muy parecido a while, pero ejecuta al menos una vez.
+
+Sintaxis
+
+do {
+
+} while (condicion);
+Diferencia clave
+while → primero pregunta
+do-while → primero ejecuta
+
+Ejemplo:
+
+int i = 1;
+
+do {
+    printf("%d\n", i);
+    i++;
+} while (i <= 5);
+Ejemplo donde se nota la diferencia
+int i = 10;
+
+while (i < 5) {
+    printf("Hola");
+}
+
+No imprime nada.
+
+Pero:
+
+int i = 10;
+
+do {
+    printf("Hola");
+} while (i < 5);
+
+Imprime una vez.
+
+14.for
+
+Es otro ciclo, más cómodo cuando sabés cuántas veces repetir.
+
+Sintaxis:
+
+for (inicio; condicion; incremento) {
+
+}
+
+Ejemplo:
+
+for (int i = 1; i <= 5; i++) {
+    printf("%d\n", i);
+}
+
+Cómo funciona:
+
+for (int i = 1; i <= 5; i++)
+Parte 1
+int i = 1
+
+Se ejecuta una vez.
+
+Parte 2:
+
+i <= 5
+
+Condición.
+
+Parte 3:
+
+i++
+
+Incremento después de cada vuelta.
+
+Comparación while vs for
+
+While:
+
+int i = 1;
+
+while (i <= 5) {
+    printf("%d", i);
+    i++;
+}
+
+For:
+
+for (int i = 1; i <= 5; i++) {
+    printf("%d", i);
+}
+
+El for queda más compacto.
+
+15. Programación esquemática
+
+La idea es dividir problemas grandes en pasos más pequeños y organizados.
+
+Antes de programar, conviene pensar:
+
+_qué entra
+_qué proceso se hace
+_qué sale
+
+Ejemplo:
+
+“Pedir dos números y mostrar la suma”
+
+Esquema:
+
+Entrada:
+número 1
+número 2
+
+Proceso:
+sumar
+
+Salida:
+resultado
+
+Luego se traduce a C:
+
+#include <stdio.h>
+
+int main() {
+
+    int a;
+    int b;
+    int suma;
+
+    printf("Ingrese un numero: ");
+    scanf("%d", &a);
+
+    printf("Ingrese otro numero: ");
+    scanf("%d", &b);
+
+    suma = a + b;
+
+    printf("Resultado: %d", suma);
+
+    return 0;
+}
+
+16. Contadores y acumuladores
+
+Se usan muchísimo en ciclos.
+
+Contador:
+
+Cuenta cuántas veces pasa algo.
+
+contador++;
+
+Ejemplo:
+
+int contador = 0;
+
+contador++;
+contador++;
+
+Termina valiendo 2.
+
+Acumulador:
+
+Va sumando valores.
+
+acumulador = acumulador + valor;
+
+Ejemplo:
+
+int suma = 0;
+
+suma = suma + 5;
+suma = suma + 3;
+
+Resultado: 8.
+
+17. Diagramas de flujo
+
+Sirven para representar visualmente cómo funciona un programa.
+
+Símbolos comunes:
+
+Símbolo	           Significado
+óvalo	           inicio/fin
+paralelogramo	   entrada/salida
+rectángulo	       proceso
+rombo	           decisión
+
+Ejemplo lógico:
+
+Inicio
+ ↓
+Pedir edad
+ ↓
+¿edad >= 18?
+ ↙        ↘
+Sí         No
+ ↓          ↓
+Mayor     Menor
+ ↓          ↓
+Fin
+
+18. Variables de control
+
+Son las variables que controlan los ciclos.
+
+Ejemplo:
+
+for (int i = 0; i < 10; i++)
+
+La variable de control es:
+
+i
+
+19. Anidación
+
+Es poner estructuras dentro de otras.
+
+If dentro de if:
+
+if (edad >= 18) {
+
+    if (tieneDNI == 1) {
+        printf("Puede entrar");
+    }
+
+}
+
+For dentro de for:
+
+Muy usado para matrices después.
+
+for (int i = 1; i <= 3; i++) {
+
+    for (int j = 1; j <= 2; j++) {
+        printf("%d %d\n", i, j);
+    }
+
+}
+
+Cómo se ejecuta:
+
+i=1
+  j=1
+  j=2
+
+i=2
+  j=1
+  j=2
+
+20. Bandera (flag)
+
+Es una variable usada para recordar algo.
+
+Generalmente:
+
+0 → falso
+1 → verdadero
+
+Ejemplo:
+
+int encontrado = 0;
+
+Si se encuentra algo:
+
+encontrado = 1;
+
+Uso típico:
+
+if (numero == buscado) {
+    encontrado = 1;
+}
+
+21. Arrays / Vectores
+
+Guardan varios datos del mismo tipo.
+
+Sin array:
+
+int a1 = 5;
+int a2 = 8;
+int a3 = 2;
+
+Muy incómodo.
+
+Con array:
+
+int numeros[3];
+
+Ahora tenés:
+
+numeros[0]
+numeros[1]
+numeros[2]
+
+Índices:
+
+IMPORTANTE:
+
+Los arrays empiezan en 0.
+
+int numeros[3];
+
+Tiene:
+
+Posición	Índice
+primera	      0
+segunda	      1
+tercera	      2
+
+Guardar valores:
+numeros[0] = 10;
+numeros[1] = 20;
+numeros[2] = 30;
+
+Mostrar valores:
+
+printf("%d", numeros[1]);
+
+Muestra 20.
+
+Recorrer arrays con for:
+
+int numeros[5];
+
+for (int i = 0; i < 5; i++) {
+    scanf("%d", &numeros[i]);
+}
+
+Mostrar después:
+
+for (int i = 0; i < 5; i++) {
+    printf("%d\n", numeros[i]);
+}
+
+22. Búsquedas en arrays
+
+Buscar un número:
+
+int encontrado = 0;
+
+for (int i = 0; i < 5; i++) {
+
+    if (numeros[i] == buscado) {
+        encontrado = 1;
+    }
+
+}
+
+23. Máximo y mínimo
+
+Muy común en parciales.
+
+Encontrar el mayor:
+
+int mayor = numeros[0];
+
+for (int i = 1; i < 5; i++) {
+
+    if (numeros[i] > mayor) {
+        mayor = numeros[i];
+    }
+
+}
+
+24. Promedio
+
+Ejemplo:
+
+int suma = 0;
+
+for (int i = 0; i < 5; i++) {
+    suma += numeros[i];
+}
+
+float promedio = suma / 5.0;
+
+25. Matrices
+
+Son arrays de dos dimensiones.
+
+Ejemplo:
+
+int matriz[3][3];
+
+Tiene:
+_filas
+_columnas
+
+Acceder:
+
+matriz[1][2] = 7;
+
+Recorrer matrices:
+for (int i = 0; i < 3; i++) {
+
+    for (int j = 0; j < 3; j++) {
+
+        scanf("%d", &matriz[i][j]);
+
+    }
+
+}
+
+Visualmente:
+[1][2][3]
+[4][5][6]
+[7][8][9]
+
+26. Cadenas (string)
+
+En C no existe un tipo string real.
+
+Se usan arrays de char.
+
+Ejemplo:
+char nombre[20];
+
+Leer string:
+scanf("%s", nombre);
+
+Mostrar:
+printf("%s", nombre);
+
+Importante
+Un string termina con:
+
+'\0'
+
+Que es el carácter nulo.
+
+27. Funciones
+
+Sirven para dividir el programa en partes reutilizables.
+
+Ejemplo básico:
+
+void saludar() {
+
+    printf("Hola\n");
+
+}
+
+Llamar función:
+saludar();
+
+Función con parámetros:
+
+void mostrarNumero(int n) {
+
+    printf("%d", n);
+
+}
+
+Uso:
+mostrarNumero(5);
+
+Función que retorna:
+
+int sumar(int a, int b) {
+
+    return a + b;
+
+}
+
+Uso:
+int resultado = sumar(3, 4);
+
+28. Listas
+
+Acá normalmente empiezan estructuras dinámicas.
+
+La idea:
+
+_los arrays tienen tamaño fijo
+_las listas pueden crecer
+
+Nodo:
+Una lista está formada por nodos.
+
+Cada nodo tiene:
+
+_dato
+_puntero al siguiente
+
+Esquema:
+[5 | * ] → [8 | * ] → [2 | NULL]
+
+Estructuras (struct):
+Se usan para crear nodos.
+
+struct Nodo {
+
+    int dato;
+    struct Nodo* siguiente;
+
+};
+
+Crear nodo:
+struct Nodo* nuevo;
+
+Concepto importante:
+siguiente
+
+guarda la dirección del próximo nodo.
+
+NULL
+
+Significa:
+_no apunta a nada
+_fin de la lista
+
+Idea principal de listas:
+
+Arrays:
+_tamaño fijo
+_acceso rápido
+
+Listas:
+_tamaño dinámico
+_inserción más flexible
