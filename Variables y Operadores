@@ -1,84 +1,62 @@
-1. Variables
+Variables y operadores
 
-Una variable guarda datos.
+## Variables
 
-Tipos básicos:
-
- Tipo	   Guarda
- int	   enteros
- float	 decimales
- char	   un carácter
-
-Ejemplos:
+```c
 int edad = 18;
 float altura = 1.75;
 char letra = 'A';
+```
 
-2.Formatos importantes:
+## scanf
 
-Formato	  Tipo
-%d	       int
-%f	       float
-%c	       char
+```c
+scanf("%d", &edad);
+```
 
-El &
+## Formatos
 
-Se usa porque scanf necesita la dirección de memoria de la variable.
+| Formato | Tipo   |
+| ------- | ------ |
+| %d      | int    |
+| %f      | float  |
+| %c      | char   |
+| %s      | string |
 
-3. Operadores Aritméticos
+## Operadores aritméticos
 
-Operador	  Significado
-   +	         suma
-   -	         resta
-   *	         multiplicación
-   /	         división
-   %	         resto
+| Operador | Significado    |
+| -------- | -------------- |
+| +        | suma           |
+| -        | resta          |
+| *        | multiplicación |
+| /        | división       |
+| %        | resto          |
 
-Ejemplo:
+## Comparaciones
 
-int resto = 10 % 3;
+| Operador | Significado   |
+| -------- | ------------- |
+| ==       | igual         |
+| !=       | distinto      |
+| >        | mayor         |
+| <        | menor         |
+| >=       | mayor o igual |
+| <=       | menor o igual |
 
-Da 1.
+## Operadores lógicos
 
-3. Comparaciones
+| Operador | Significado |   |   |
+| -------- | ----------- | - | - |
+| &&       | Y           |   |   |
+|          |             |   | O |
+| !        | NOT         |   |   |
 
-Devuelven verdadero o falso.
+## Incremento y decremento
 
-Operador	     Significado
-  ==	            igual
-  !=	            distinto
-  >	              mayor
-  <	              menor
-  >=	            mayor o igual
-  <=	            menor o igual
-
-Ejemplo:
-
-edad >= 18
-
-4. Operadores lógicos:
-
-Operador	    Significado
-   &&	            Y
-   `	
-   !	           NOT
-
-Ejemplo:
-
-if (edad >= 18 && edad <= 30)
-
-5. Incremento y decremento
-
+```c
 i++;
-
-equivale a:
-
-i = i + 1;
-
-También:
-
+equivale a: i=i+1
 i--;
-
-equivale a:
-
-i = i - 1;
+equivale a: i=i-1
+```
