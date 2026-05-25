@@ -1,0 +1,118 @@
+Matrices
+
+¿Qué es una matriz?
+
+Una matriz es un array de dos dimensiones.
+
+Mientras un vector guarda datos en una sola línea:
+
+int numeros[5];
+
+una matriz guarda datos en filas y columnas:
+
+int matriz[3][3];
+
+Visualmente:
+[1][2][3]
+[4][5][6]
+[7][8][9]
+
+Sintaxis
+
+tipo nombre[filas][columnas];
+
+Ejemplo:
+
+int matriz[2][3];
+
+Tiene:
+
+2 filas
+3 columnas
+
+Índices:
+
+IMPORTANTE:
+Las matrices empiezan en 0.
+
+matriz[0][0]
+
+representa:
+
+fila 0
+columna 0
+
+Guardar datos:
+matriz[0][0] = 10;
+matriz[0][1] = 20;
+matriz[1][0] = 30;
+
+Mostrar un elemento:
+printf("%d", matriz[0][1]);
+
+Recorrer matrices:
+
+Se usan ciclos anidados.
+
+for (int i = 0; i < 3; i++) {
+
+    for (int j = 0; j < 3; j++) {
+
+        printf("%d ", matriz[i][j]);
+
+    }
+
+    printf("\n");
+
+}
+
+Cargar matriz:
+
+for (int i = 0; i < 2; i++) {
+
+    for (int j = 0; j < 2; j++) {
+
+        scanf("%d", &matriz[i][j]);
+
+    }
+
+}
+
+Sumar todos los elementos:
+
+int suma = 0;
+
+for (int i = 0; i < 3; i++) {
+
+    for (int j = 0; j < 3; j++) {
+
+        suma += matriz[i][j];
+
+    }
+
+}
+
+Diagonal principal
+
+Es:
+
+[0][0]
+[1][1]
+[2][2]
+
+Ejemplo:
+
+for (int i = 0; i < 3; i++) {
+
+    printf("%d\n", matriz[i][i]);
+
+}
+
+Error común
+for (int i = 1; i <= 3; i++)
+
+Esto puede acceder fuera de la matriz.
+
+Correcto:
+
+for (int i = 0; i < 3; i++)
