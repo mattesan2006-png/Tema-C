@@ -1,0 +1,125 @@
+1. Arrays / Vectores
+
+Guardan varios datos del mismo tipo.
+
+Sin array:
+
+int a1 = 5;
+int a2 = 8;
+int a3 = 2;
+
+Muy incómodo.
+
+Con array:
+
+int numeros[3];
+
+Ahora tenés:
+
+numeros[0]
+numeros[1]
+numeros[2]
+
+Índices:
+
+IMPORTANTE:
+
+Los arrays empiezan en 0.
+
+int numeros[3];
+
+Tiene:
+
+Posición	Índice
+primera	      0
+segunda	      1
+tercera	      2
+
+Guardar valores:
+numeros[0] = 10;
+numeros[1] = 20;
+numeros[2] = 30;
+
+Mostrar valores:
+
+printf("%d", numeros[1]);
+
+Muestra 20.
+
+Recorrer arrays con for:
+
+int numeros[5];
+
+for (int i = 0; i < 5; i++) {
+    scanf("%d", &numeros[i]);
+}
+
+Mostrar después:
+
+for (int i = 0; i < 5; i++) {
+    printf("%d\n", numeros[i]);
+}
+
+2. Búsquedas en arrays
+
+Buscar un número:
+
+int encontrado = 0;
+
+for (int i = 0; i < 5; i++) {
+
+    if (numeros[i] == buscado) {
+        encontrado = 1;
+    }
+
+}
+
+3. Máximo y mínimo
+
+Muy común en parciales.
+
+Encontrar el mayor:
+
+int mayor = numeros[0];
+
+for (int i = 1; i < 5; i++) {
+
+    if (numeros[i] > mayor) {
+        mayor = numeros[i];
+    }
+
+}
+
+4. Promedio
+
+Ejemplo:
+
+int suma = 0;
+
+for (int i = 0; i < 5; i++) {
+    suma += numeros[i];
+}
+
+float promedio = suma / 5.0;
+
+5. Cadenas (string)
+
+En C no existe un tipo string real.
+
+Se usan arrays de char.
+
+Ejemplo:
+char nombre[20];
+
+Leer string:
+scanf("%s", nombre);
+
+Mostrar:
+printf("%s", nombre);
+
+Importante
+Un string termina con:
+
+'\0'
+
+Que es el carácter nulo.
