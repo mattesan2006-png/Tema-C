@@ -51,23 +51,7 @@ int main() {
 
 Hace un salto de línea.
 
-3. Variables
-
-Una variable guarda datos.
-
-Tipos básicos:
- Tipo	   Guarda
- int	   enteros
- float	 decimales
- char	   un carácter
-
-Ejemplos:
-
-int edad = 18;
-float altura = 1.75;
-char letra = 'A';
-
-4. Entrada de datos (scanf)
+3. Entrada de datos (scanf)
 
 Sirve para leer datos del usuario.
 
@@ -88,46 +72,3 @@ int main() {
 
     return 0;
 }
-
-Formatos importantes:
-
-Formato	  Tipo
-%d	      int
-%f	      float
-%c	      char
-
-El &
-
-Se usa porque scanf necesita la dirección de memoria de la variable.
-
-5. Operadores
-Aritméticos
-
-Operador	  Significado
-   +	         suma
-   -	         resta
-   *	         multiplicación
-   /	         división
-   %	         resto
-
-Ejemplo:
-
-int resto = 10 % 3;
-
-Da 1.
-
-6. Comparaciones
-
-Devuelven verdadero o falso.
-
-Operador	     Significado
-  ==	            igual
-  !=	            distinto
-  >	              mayor
-  <	              menor
-  >=	            mayor o igual
-  <=	            menor o igual
-
-Ejemplo:
-
-edad >= 18
