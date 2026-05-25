@@ -1,3 +1,29 @@
+0. Diagramas de flujo
+
+Sirven para representar visualmente cómo funciona un programa.
+
+Símbolos comunes:
+
+Símbolo	           Significado
+óvalo	           inicio/fin
+paralelogramo	   entrada/salida
+rectángulo	       proceso
+rombo	           decisión
+
+Ejemplo lógico:
+
+Inicio
+ ↓
+Pedir edad
+ ↓
+¿edad >= 18?
+ ↙        ↘
+Sí         No
+ ↓          ↓
+Mayor     Menor
+ ↓          ↓
+Fin
+
 1. ¿Qué es C?
 
 Programming El lenguaje C es un lenguaje:
@@ -76,3 +102,52 @@ int main() {
 El &
 
 Se usa porque scanf necesita la dirección de memoria de la variable.
+
+2. Programación esquemática
+
+La idea es dividir problemas grandes en pasos más pequeños y organizados.
+
+Antes de programar, conviene pensar:
+
+_qué entra
+_qué proceso se hace
+_qué sale
+
+Ejemplo:
+
+“Pedir dos números y mostrar la suma”
+
+Esquema:
+
+Entrada:
+número 1
+número 2
+
+Proceso:
+sumar
+
+Salida:
+resultado
+
+Luego se traduce a C:
+
+#include <stdio.h>
+
+int main() {
+
+    int a;
+    int b;
+    int suma;
+
+    printf("Ingrese un numero: ");
+    scanf("%d", &a);
+
+    printf("Ingrese otro numero: ");
+    scanf("%d", &b);
+
+    suma = a + b;
+
+    printf("Resultado: %d", suma);
+
+    return 0;
+}
