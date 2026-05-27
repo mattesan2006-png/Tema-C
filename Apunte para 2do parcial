@@ -1,0 +1,391 @@
+1. Arrays
+
+Crear array
+int numeros[5];
+
+Índices
+Los arrays empiezan en: 0
+
+Ejemplo:
+numeros[0]
+numeros[1]
+numeros[2]
+
+Recorrer array
+for (int i = 0; i < 5; i++)
+{
+    printf("%d\n", numeros[i]);
+}
+
+Error MUY común
+
+Incorrecto:
+for (int i = 0; i <= 5; i++)
+
+Correcto:
+for (int i = 0; i < 5; i++)
+
+Modificar valores
+numeros[0] = 100;
+
+Buscar elemento
+int encontrado = 0;
+
+for (int i = 0; i < n; i++)
+{
+    if (numeros[i] == buscado)
+    {
+        encontrado = 1;
+    }
+}
+
+2. Structs
+
+¿Qué es un struct?
+Agrupa variables diferentes.
+
+Ejemplo
+struct Producto
+{
+    int codigo;
+    char nombre[20];
+    float precio;
+};
+
+Crear variable
+struct Producto p1;
+
+Acceder a campos
+p1.precio = 100;
+
+Mostrar campos
+printf("%f", p1.precio);
+
+Arrays de structs
+struct Producto inventario[100];
+
+MUY importante.
+
+Acceso a arrays de structs
+inventario[i].precio
+inventario[i].nombre
+inventario[i].codigo
+
+3. Bubble Sort (Método Burbuja)
+
+¿Qué hace?
+Ordena elementos.
+
+Algoritmo básico
+for (i = 0; i < n - 1; i++)
+{
+    for (j = 0; j < n - 1 - i; j++)
+    {
+        if (v[j] > v[j + 1])
+        {
+            temp = v[j];
+            v[j] = v[j + 1];
+            v[j + 1] = temp;
+        }
+    }
+}
+
+Intercambio IMPORTANTÍSIMO
+temp = v[j];
+v[j] = v[j + 1];
+v[j + 1] = temp;
+
+Qué hace
+Si el elemento izquierdo es mayor:
+-intercambia posiciones
+
+IMPORTANTE
+
+Después de cada pasada:
+-el mayor queda al final
+
+Bubble sort en structs
+if (inventario[j].codigo > inventario[j + 1].codigo)
+
+4. Búsqueda Binaria
+
+IMPORTANTE
+
+La búsqueda binaria:
+SOLO funciona en arrays ordenados
+
+Variables importantes
+int inicio = 0;
+int fin = n - 1;
+
+Calcular medio
+int medio = inicio + (fin - inicio) / 2;
+
+Algoritmo
+while (inicio <= fin)
+{
+    int medio = inicio + (fin - inicio) / 2;
+
+    if (v[medio] == buscado)
+    {
+        return medio;
+    }
+
+    if (v[medio] < buscado)
+    {
+        inicio = medio + 1;
+    }
+    else
+    {
+        fin = medio - 1;
+    }
+}
+
+Cómo funciona
+
+Si el medio es menor
+Busca a la derecha.
+inicio = medio + 1;
+
+Si el medio es mayor
+Busca a la izquierda.
+fin = medio - 1;
+
+Condición IMPORTANTÍSIMA
+inicio <= fin
+
+5. Funciones
+
+Función básica
+void saludar()
+{
+    printf("Hola");
+}
+
+Función con retorno
+int sumar(int a, int b)
+{
+    return a + b;
+}
+
+return
+Devuelve un valor.
+
+void
+No devuelve nada.
+
+Llamar función
+saludar();
+
+Función que devuelve struct
+struct Producto buscarProducto(...)
+
+6. Paso por valor
+
+IMPORTANTÍSIMO
+
+En C:
+-las funciones reciben COPIAS
+
+Ejemplo
+
+void cambiar(int x)
+{
+    x = 100;
+}
+
+NO cambia la variable original.
+
+Ejemplo típico de parcial
+
+void modificar(int x)
+{
+    x = 20;
+}
+
+int main()
+{
+    int a = 5;
+
+    modificar(a);
+
+    printf("%d", a);
+}
+
+Resultado: 5
+
+7. Paso por referencia
+
+¿Para qué sirve?
+Permite modificar la variable original.
+
+Ejemplo
+
+void funcion(int *n)
+
+Modificar valor real
+(*n)--;
+
+IMPORTANTE
+
+*n
+accede al valor original.
+
+Diferencia IMPORTANTÍSIMA
+
+Paso por valor
+void funcion(int n)
+Modifica una copia.
+
+Paso por referencia
+void funcion(int *n)
+Modifica el original.
+
+8. Eliminar elementos de un array
+
+Idea
+Mover elementos hacia la izquierda.
+
+Ejemplo:
+
+for (j = i; j < n - 1; j++)
+{
+    v[j] = v[j + 1];
+}
+
+Visualmente:
+
+Antes:
+[10][20][30][40]
+
+Eliminar 20:
+[10][30][40]
+
+Reducir tamaño lógico
+n--;
+
+9. Agregar elementos
+
+Agregar al final
+v[n] = nuevo;
+n++;
+
+Reordenar
+Muchas veces:
+-se vuelve a aplicar bubble sort
+
+10. Strings
+
+String en C
+char nombre[20];
+
+Leer string simple
+scanf("%s", nombre);
+
+Leer con espacios
+scanf(" %19[^\n]", nombre);
+
+IMPORTANTE
+
+%s
+Lee:
+-hasta espacio
+
+%[^\n]
+Lee:
+-línea completa
+
+11. Menús
+Menú típico
+
+do
+{
+    printf("1) Listar\n");
+    printf("2) Buscar\n");
+
+    scanf("%d", &opcion);
+
+} while(opcion != 5);
+
+do-while
+
+Garantiza:
+mínimo una ejecución
+
+12. Cosas IMPORTANTES para el parcial
+MUY importante
+
+✅ Arrays
+✅ Arrays de structs
+✅ Bubble Sort
+✅ Búsqueda Binaria
+✅ Funciones
+✅ Paso por referencia
+✅ Recorridos con for
+✅ Eliminar elementos
+✅ Agregar elementos
+✅ Strings
+✅ Lectura de código
+
+Errores MUY comunes
+
+-Error 1
+i <= n
+
+Debe ser:
+i < n
+
+-Error 2
+if (a = 5)
+
+Debe ser:
+if (a == 5)
+
+-Error 3
+
+Olvidar:
+i++
+
+-Error 4
+
+Usar búsqueda binaria:
+sin ordenar antes
+
+13. Preguntas típicas de parcial
+
+-¿Qué imprime?
+
+int v[] = {1,2,3};
+
+printf("%d", v[1]);
+
+Resultado: 2
+
+-¿Qué hace este código?
+
+for (j = i; j < n - 1; j++)
+{
+    v[j] = v[j + 1];
+}
+
+Respuesta:
+
+elimina un elemento desplazando el array.
+
+-¿Por qué se usa *n?
+
+Respuesta:
+
+para modificar la variable original.
+
+-¿Por qué búsqueda binaria necesita ordenamiento?
+
+Respuesta:
+
+porque descarta mitades del array.
+
+-¿Qué hace temp?
+
+Respuesta:
+
+permite intercambiar valores.
