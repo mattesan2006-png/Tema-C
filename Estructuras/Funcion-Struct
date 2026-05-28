@@ -1,0 +1,7 @@
+// Funcion que devuelve un struct
+// Sirve para retornar registros completos
+
+struct Producto buscarProducto(struct Producto inventario[], int n)
+{
+    
+}
