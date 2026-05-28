@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+struct Persona
+{
+    int dni;
+    char nombre[30];
+};
+
+int main()
+{
+    struct Persona persona;
+
+    // Leer struct
+
+    printf("Ingrese DNI: ");
+    scanf("%d", &persona.dni);
+
+    // Leer string con espacios
+
+    printf("Ingrese nombre completo: ");
+    scanf(" %29[^\n]", persona.nombre);
+
+    // Mostrar struct
+
+    printf("\nDATOS\n");
+
+    printf("%d\n", persona.dni);
+
+    printf("%s\n", persona.nombre);
+
+    return 0;
+}
