@@ -1,0 +1,6 @@
+// Intercambio de variables
+// Sirve para cambiar posiciones
+
+temp = a;
+a = b;
+b = temp;
