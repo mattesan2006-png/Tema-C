@@ -1,0 +1,5 @@
+// Leer datos de struct
+// Sirve para cargar registros
+
+scanf("%d", &persona.dni);
+scanf("%s", persona.nombre);
