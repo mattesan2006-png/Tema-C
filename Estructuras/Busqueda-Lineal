@@ -1,0 +1,10 @@
+// Busqueda lineal
+// Sirve para buscar elemento recorriendo todo el array
+
+for (int i = 0; i < n; i++)
+{
+    if (v[i] == buscado)
+    {
+        printf("Encontrado");
+    }
+}
