@@ -1,0 +1,14 @@
+// Menu con do-while
+// Sirve para repetir opciones hasta salir
+
+int opcion;
+
+do
+{
+    printf("1) Listar\n");
+    printf("2) Buscar\n");
+    printf("3) Salir\n");
+
+    scanf("%d", &opcion);
+
+} while(opcion != 3);
