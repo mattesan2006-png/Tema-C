@@ -1,0 +1,6 @@
+// Agregar elemento a array
+// Sirve para insertar al final
+
+v[n] = nuevo;
+
+n++;
