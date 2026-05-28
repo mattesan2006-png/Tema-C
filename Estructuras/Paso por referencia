@@ -1,0 +1,7 @@
+// Paso por referencia
+// Sirve para modificar la variable original
+
+void funcion(int *n)
+{
+    (*n)--;
+}
