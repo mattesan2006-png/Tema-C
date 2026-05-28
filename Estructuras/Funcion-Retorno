@@ -1,0 +1,7 @@
+// Funcion con retorno
+// Sirve para devolver valores
+
+int sumar(int a, int b)
+{
+    return a + b;
+}
