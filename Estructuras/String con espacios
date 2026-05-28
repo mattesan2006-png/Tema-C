@@ -1,0 +1,4 @@
+// Leer string con espacios
+// Sirve para leer texto completo
+
+scanf(" %19[^\n]", nombre);
