@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int v[] = {4,8,2,9,1};
+
+    int buscado = 9;
+
+    int encontrado = 0;
+
+    // Busqueda lineal
+
+    for (int i = 0; i < 5; i++)
+    {
+        if (v[i] == buscado)
+        {
+            encontrado = 1;
+        }
+    }
+
+    if (encontrado)
+    {
+        printf("Numero encontrado");
+    }
+    else
+    {
+        printf("Numero no encontrado");
+    }
+
+    return 0;
+}
