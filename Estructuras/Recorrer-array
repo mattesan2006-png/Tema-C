@@ -1,0 +1,7 @@
+// Recorrer array
+// Sirve para mostrar o procesar arrays
+
+for (int i = 0; i < n; i++)
+{
+    printf("%d\n", v[i]);
+}
