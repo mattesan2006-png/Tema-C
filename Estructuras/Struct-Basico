@@ -1,0 +1,8 @@
+// Struct basico
+// Sirve para agrupar variables distintas
+
+struct Persona
+{
+    int dni;
+    char nombre[30];
+};
