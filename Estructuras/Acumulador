@@ -1,0 +1,4 @@
+// Acumulador
+// Sirve para sumar valores
+
+suma += numero;
