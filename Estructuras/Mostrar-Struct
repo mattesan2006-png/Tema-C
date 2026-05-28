@@ -1,0 +1,6 @@
+// Mostrar struct
+// Sirve para imprimir registros
+
+printf("%d %s",
+       persona.dni,
+       persona.nombre);
