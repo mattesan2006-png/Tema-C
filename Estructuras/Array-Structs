@@ -1,0 +1,11 @@
+// Array de Structs
+// Sirve para guardar muchos registros
+
+struct Producto
+{
+    int codigo;
+    char nombre[20];
+    float precio;
+};
+
+struct Producto inventario[100];
