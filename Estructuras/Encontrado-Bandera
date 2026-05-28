@@ -1,0 +1,9 @@
+// Bandera
+// Sirve para indicar si algo fue encontrado
+
+int encontrado = 0;
+
+if (v[i] == buscado)
+{
+    encontrado = 1;
+}
