@@ -1,0 +1,26 @@
+// Busqueda Binaria
+// Sirve para buscar elementos rapidamente
+// IMPORTANTE: el array debe estar ordenado
+
+int inicio = 0;
+int fin = n - 1;
+
+while (inicio <= fin)
+{
+    int medio = inicio + (fin - inicio) / 2;
+
+    if (v[medio] == buscado)
+    {
+        printf("Encontrado");
+        break;
+    }
+
+    if (v[medio] < buscado)
+    {
+        inicio = medio + 1;
+    }
+    else
+    {
+        fin = medio - 1;
+    }
+}
