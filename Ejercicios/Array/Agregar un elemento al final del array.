@@ -1,0 +1,29 @@
+//Agregar un elemento al final del array.
+
+#include <stdio.h>
+
+int main() {
+    int array[6]; // Aumentamos el tamaño del array para agregar un nuevo elemento
+    int n = 5; // Número de elementos actuales
+    int i;
+    int nuevoElemento;
+
+    printf("Ingrese 5 números enteros:\n");
+
+    for (i = 0; i < n; i++) {
+        scanf("%d", &array[i]);
+    }
+
+    printf("Ingrese el nuevo número a agregar al final del array:\n");
+    scanf("%d", &nuevoElemento);
+
+    array[n] = nuevoElemento; // Agregar el nuevo elemento al final del array
+    n++; // Incrementar el número de elementos
+
+    printf("Nuevo array con el elemento agregado:\n");
+    for (i = 0; i < n; i++) {
+        printf("%d\n", array[i]);
+    }
+
+    return 0;
+}
