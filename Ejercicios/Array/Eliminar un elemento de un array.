@@ -1,0 +1,42 @@
+//Eliminar un elemento de un array.
+
+#include <stdio.h>
+
+int main() {
+    int array[5];
+    int n = 5;
+    int i;
+    int numeroEliminar;
+    int encontrado = 0;
+
+    printf("Ingrese 5 números enteros:\n");
+
+    for (i = 0; i < n; i++) {
+        scanf("%d", &array[i]);
+    }
+
+    printf("Ingrese el número a eliminar:\n");
+    scanf("%d", &numeroEliminar);
+
+    for (i = 0; i < n; i++) {
+        if (array[i] == numeroEliminar) {
+            encontrado = 1;
+            break;
+        }
+    }
+
+    if (encontrado) {
+        for (int j = i; j < n - 1; j++) {
+            array[j] = array[j + 1];
+        }
+        n--; // Reducir el tamaño del array
+        printf("Número eliminado. Nuevo array:\n");
+        for (i = 0; i < n; i++) {
+            printf("%d\n", array[i]);
+        }
+    } else {
+        printf("Número no encontrado en el array.\n");
+    }
+
+    return 0;
+}
