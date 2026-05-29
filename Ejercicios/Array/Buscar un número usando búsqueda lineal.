@@ -1,0 +1,35 @@
+//Buscar un número usando búsqueda lineal.
+
+#include <stdio.h>
+
+int main() {
+    int array[5];
+    int n = 5;
+    int i;
+    int numeroBuscado;
+    int encontrado = 0;
+
+    printf("Ingrese 5 números enteros:\n");
+
+    for (i = 0; i < n; i++) {
+        scanf("%d", &array[i]);
+    }
+
+    printf("Ingrese el número a buscar:\n");
+    scanf("%d", &numeroBuscado);
+
+    for (i = 0; i < n; i++) {
+        if (array[i] == numeroBuscado) {
+            encontrado = 1;
+            break;
+        }
+    }
+
+    if (encontrado) {
+        printf("Número encontrado en la posición: %d\n", i);
+    } else {
+        printf("Número no encontrado en el array.\n");
+    }
+
+    return 0;
+}
