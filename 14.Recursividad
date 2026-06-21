@@ -1,0 +1,37 @@
+Recursividad
+La recursividad es cuando una función se llama a sí misma.
+
+Se usa para resolver problemas dividiéndolos en partes más pequeñas.
+
+Toda función recursiva tiene 2 partes
+
+Caso base
+Es la condición que frena la recursión.
+
+Paso recursivo
+Es la llamada a la misma función con un problema más chico.
+
+Ejemplo: factorial
+El factorial de un número se escribe así:
+
+5! = 5 * 4 * 3 * 2 * 1
+4! = 4 * 3 * 2 * 1
+
+Función factorial en C
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+Ejemplo de funcionamiento
+factorial(4)
+= 4 * factorial(3)
+= 4 * 3 * factorial(2)
+= 4 * 3 * 2 * factorial(1)
+= 4 * 3 * 2 * 1 * factorial(0)
+= 24
+
+Importante
+Si no hay caso base, la función se llama infinitamente y puede producir un error de pila.
