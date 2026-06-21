@@ -1,0 +1,9 @@
+Relación entre pilas y recursividad
+La recursividad usa internamente la pila de llamadas.
+
+Cada vez que una función se llama:
+
+se guarda información en la pila
+se reserva espacio para variables locales
+cuando termina, vuelve a la llamada anterior
+Por eso, la recursividad está muy relacionada con las pilas.
