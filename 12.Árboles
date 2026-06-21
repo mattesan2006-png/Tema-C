@@ -1,0 +1,44 @@
+Árboles
+Un árbol es una estructura jerárquica.
+
+Tiene:
+
+una raíz
+nodos hijos
+nodos hoja
+Se usa mucho cuando los datos tienen una organización por niveles.
+
+Árbol binario
+En un árbol binario, cada nodo puede tener como máximo dos hijos:
+
+izquierdo
+derecho
+
+Estructura de un nodo binario
+
+typedef struct Arbol {
+    int dato;
+    struct Arbol *izq;
+    struct Arbol *der;
+} Arbol;
+
+Conceptos importantes
+Raíz
+Es el primer nodo del árbol.
+
+Hoja
+Es un nodo que no tiene hijos.
+
+Subárbol
+Es una parte del árbol que también forma un árbol.
+
+Recorridos
+
+Preorden
+Primero raíz, después izquierda, después derecha.
+
+Inorden
+Primero izquierda, después raíz, después derecha.
+
+Postorden
+Primero izquierda, después derecha, después raíz.
