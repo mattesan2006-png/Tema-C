@@ -1,0 +1,33 @@
+Grafos
+Un grafo es una estructura formada por:
+
+vértices
+aristas
+
+Sirve para representar relaciones entre cosas.
+
+Por ejemplo:
+
+ciudades conectadas por rutas
+personas en una red social
+páginas web enlazadas
+
+Tipos de grafos
+No dirigido
+La conexión va en ambos sentidos.
+
+Dirigido
+La conexión tiene dirección.
+
+Ponderado
+Las conexiones tienen un peso o costo.
+
+Representación con matriz de adyacencia
+int grafo[4][4] = {
+    {0, 1, 1, 0},
+    {1, 0, 0, 1},
+    {1, 0, 0, 1},
+    {0, 1, 1, 0}
+};
+
+Si grafo[i][j] == 1, entonces hay conexión entre esos vértices.
