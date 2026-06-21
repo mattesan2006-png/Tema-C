@@ -1,0 +1,36 @@
+Listas enlazadas
+Una lista enlazada es una estructura formada por nodos.
+
+Cada nodo tiene:
+
+un dato
+un puntero al siguiente nodo
+A diferencia de los arrays, no ocupa posiciones seguidas en memoria.
+
+Estructura de un nodo
+
+typedef struct Nodo {
+    int dato;
+    struct Nodo *sig;
+} Nodo;
+
+Insertar al inicio
+void insertarInicio(Nodo **lista, int valor) {
+    Nodo *nuevo = malloc(sizeof(Nodo));
+    nuevo->dato = valor;
+    nuevo->sig = *lista;
+    *lista = nuevo;
+}
+
+Recorrer la lista
+void mostrarLista(Nodo *lista) {
+    while (lista != NULL) {
+        printf("%d\n", lista->dato);
+        lista = lista->sig;
+    }
+}
+
+Importante
+Si la lista está vacía, el puntero vale NULL.
+Hay que usar malloc para reservar memoria.
+Al terminar, conviene liberar memoria con free.
