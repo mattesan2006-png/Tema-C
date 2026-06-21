@@ -1,0 +1,55 @@
+Pilas
+Una pila es una estructura de datos que guarda elementos siguiendo el orden LIFO:
+
+Last In, First Out
+o sea: el último que entra es el primero que sale.
+
+Se parece a una pila de platos: agregás arriba y sacás arriba.
+
+Operaciones básicas
+
+push
+Agrega un elemento al tope.
+
+pop
+Saca el elemento del tope.
+
+top o peek
+Muestra el elemento del tope sin sacarlo.
+
+isEmpty
+Dice si la pila está vacía.
+
+Ejemplo de pila en C
+
+#define MAX 100
+
+typedef struct {
+    int datos[MAX];
+    int tope;
+} Pila;
+
+Inicializar
+void iniciar(Pila *p) {
+    p->tope = -1;
+}
+
+Ver si está vacía
+int estaVacia(Pila *p) {
+    return p->tope == -1;
+}
+
+Agregar un elemento
+void push(Pila *p, int valor) {
+    if (p->tope < MAX - 1) {
+        p->datos[++p->tope] = valor;
+    }
+}
+
+Sacar un elemento
+int pop(Pila *p) {
+    if (!estaVacia(p)) {
+        return p->datos[p->tope--];
+    }
+    return -1;
+}
