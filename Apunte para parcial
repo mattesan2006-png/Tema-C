@@ -1,0 +1,553 @@
+# C - Resumen (Pilas → Recursividad)
+
+---
+
+# Pilas (Stack)
+
+## Definición
+
+Una pila es una estructura de datos **LIFO** (Last In, First Out).
+
+> El último elemento en entrar es el primero en salir.
+
+Ejemplo:
+
+```
+Push(1)
+Push(2)
+Push(3)
+
+Top
+
+3
+
+Pop()
+
+Queda:
+
+2
+1
+```
+
+## Operaciones
+
+| Operación | Descripción |
+|-----------|-------------|
+| Push | Agrega un elemento arriba |
+| Pop | Elimina el elemento superior |
+| Peek / Top | Devuelve el elemento superior sin eliminarlo |
+| isEmpty | Indica si la pila está vacía |
+| isFull | Solo si se implementa con arreglo |
+
+## Complejidad
+
+Push → O(1)
+
+Pop → O(1)
+
+Peek → O(1)
+
+## Implementación
+
+Puede hacerse mediante:
+
+- Arreglo
+- Lista enlazada
+
+### Arreglo
+
+Ventajas
+
+- Muy rápido.
+- Acceso simple.
+
+Desventajas
+
+- Tamaño fijo.
+
+### Lista enlazada
+
+Ventajas
+
+- Tamaño dinámico.
+
+Desventajas
+
+- Usa memoria extra por los punteros.
+
+## Aplicaciones
+
+- Deshacer (Undo)
+- Navegadores
+- Balanceo de paréntesis
+- Llamadas a funciones
+- Recursividad
+
+---
+
+# Colas (Queue)
+
+## Definición
+
+Una cola trabaja mediante **FIFO** (First In, First Out).
+
+> El primero en entrar es el primero en salir.
+
+Ejemplo
+
+```
+Enqueue(10)
+Enqueue(20)
+Enqueue(30)
+
+Sale:
+
+10
+```
+
+## Operaciones
+
+| Operación | Descripción |
+|-----------|-------------|
+| Enqueue | Agregar al final |
+| Dequeue | Sacar del frente |
+| Front | Ver el primero |
+| isEmpty | Cola vacía |
+
+## Complejidad
+
+Enqueue → O(1)
+
+Dequeue → O(1)
+
+## Implementaciones
+
+- Arreglo
+- Cola circular
+- Lista enlazada
+
+### Cola circular
+
+Reutiliza posiciones liberadas del arreglo.
+
+Evita desperdiciar memoria.
+
+## Aplicaciones
+
+- Impresoras
+- Turnos
+- Planificación de procesos
+- Atención al cliente
+
+---
+
+# Listas enlazadas
+
+## Definición
+
+Una lista enlazada está formada por nodos.
+
+Cada nodo posee:
+
+- dato
+- puntero al siguiente
+
+```
+[10|*] → [20|*] → [30|null]
+```
+
+## Tipos
+
+### Lista simple
+
+Cada nodo apunta al siguiente.
+
+### Lista doble
+
+Cada nodo posee:
+
+- siguiente
+- anterior
+
+```
+← 10 ↔ 20 ↔ 30 →
+```
+
+### Lista circular
+
+El último apunta nuevamente al primero.
+
+---
+
+## Ventajas
+
+- Tamaño dinámico.
+- Inserciones rápidas.
+- Eliminaciones rápidas.
+
+## Desventajas
+
+- No permite acceso directo.
+- Debe recorrerse nodo por nodo.
+
+---
+
+## Complejidad
+
+Buscar → O(n)
+
+Insertar al inicio → O(1)
+
+Eliminar al inicio → O(1)
+
+Acceder al elemento n → O(n)
+
+---
+
+# Árboles
+
+## Definición
+
+Un árbol es una estructura jerárquica formada por nodos.
+
+## Conceptos
+
+Raíz
+
+Primer nodo.
+
+Hoja
+
+Nodo sin hijos.
+
+Padre
+
+Nodo que tiene hijos.
+
+Hijo
+
+Nodo dependiente.
+
+Ancestro
+
+Nodo superior.
+
+Descendiente
+
+Nodo inferior.
+
+---
+
+# Árbol Binario
+
+Cada nodo puede tener **como máximo dos hijos**.
+
+```
+      A
+     / \
+    B   C
+```
+
+---
+
+# Recorridos
+
+## Preorden
+
+Raíz
+
+Izquierda
+
+Derecha
+
+```
+R-I-D
+```
+
+---
+
+## Inorden
+
+Izquierda
+
+Raíz
+
+Derecha
+
+```
+I-R-D
+```
+
+En un ABB devuelve los datos ordenados.
+
+---
+
+## Postorden
+
+Izquierda
+
+Derecha
+
+Raíz
+
+```
+I-D-R
+```
+
+---
+
+# Árbol Binario de Búsqueda (ABB)
+
+## Regla principal
+
+Todo nodo cumple:
+
+Izquierda < Nodo < Derecha
+
+Ejemplo
+
+```
+      8
+     / \
+    3   12
+   / \    \
+  1   5    15
+```
+
+Buscar
+
+Si el valor es menor → izquierda
+
+Si es mayor → derecha
+
+---
+
+## Complejidad
+
+Balanceado
+
+Buscar → O(log n)
+
+Desbalanceado
+
+Buscar → O(n)
+
+---
+
+# Recursividad
+
+## Definición
+
+Una función que se llama a sí misma.
+
+## Debe tener
+
+Caso base
+
+Detiene la recursión.
+
+Caso recursivo
+
+Vuelve a llamar a la función.
+
+Ejemplo
+
+```c
+int factorial(int n){
+
+    if(n==0)
+        return 1;
+
+    return n * factorial(n-1);
+
+}
+```
+
+Caso base
+
+```
+n == 0
+```
+
+Caso recursivo
+
+```
+factorial(n-1)
+```
+
+---
+
+## Stack Overflow
+
+Ocurre cuando la pila de llamadas se llena.
+
+Sucede normalmente porque:
+
+- no existe caso base
+- demasiadas llamadas recursivas
+
+---
+
+## Ventajas
+
+- Código más simple.
+- Ideal para árboles.
+- Divide problemas.
+
+## Desventajas
+
+- Consume más memoria.
+- Más lenta que un ciclo en algunos casos.
+- Puede producir Stack Overflow.
+
+---
+
+# Relación entre Pilas y Recursividad
+
+Cada llamada a una función se guarda en la pila.
+
+Cuando una función termina:
+
+La pila elimina esa llamada (Pop).
+
+Por eso la recursividad depende de la pila.
+
+---
+
+# Diferencias importantes
+
+## Pila vs Cola
+
+Pila
+
+LIFO
+
+Último en entrar, primero en salir.
+
+Cola
+
+FIFO
+
+Primero en entrar, primero en salir.
+
+---
+
+## Arreglo vs Lista
+
+Arreglo
+
+✔ Acceso inmediato.
+
+✔ Tamaño fijo.
+
+Lista
+
+✔ Tamaño dinámico.
+
+✔ Inserciones rápidas.
+
+✘ Acceso secuencial.
+
+---
+
+# Multiple Choice (Muy preguntado)
+
+✔ LIFO = Stack
+
+✔ FIFO = Queue
+
+✔ Push agrega
+
+✔ Pop elimina
+
+✔ Peek mira sin eliminar
+
+✔ Enqueue agrega
+
+✔ Dequeue elimina
+
+✔ Hoja = nodo sin hijos
+
+✔ Raíz = primer nodo
+
+✔ ABB:
+
+Izquierda < Nodo < Derecha
+
+✔ Inorden devuelve ordenado
+
+✔ Toda recursividad necesita caso base
+
+✔ La recursividad utiliza una pila
+
+✔ Sin caso base → Stack Overflow
+
+---
+
+# Complejidades para memorizar
+
+Pila
+
+Push → O(1)
+
+Pop → O(1)
+
+Peek → O(1)
+
+Cola
+
+Enqueue → O(1)
+
+Dequeue → O(1)
+
+Lista
+
+Buscar → O(n)
+
+Insertar inicio → O(1)
+
+Árbol ABB
+
+Buscar balanceado → O(log n)
+
+Buscar desbalanceado → O(n)
+
+---
+
+# Palabras clave
+
+Stack = Pila
+
+Queue = Cola
+
+Node = Nodo
+
+Root = Raíz
+
+Leaf = Hoja
+
+Parent = Padre
+
+Child = Hijo
+
+Ancestor = Ancestro
+
+Descendant = Descendiente
+
+Push = Insertar
+
+Pop = Eliminar
+
+Peek = Ver
+
+Enqueue = Insertar
+
+Dequeue = Eliminar
+
+Recursion = Recursividad
+
+Base Case = Caso Base
+
+Call Stack = Pila de llamadas
+
+Stack Overflow = Desbordamiento de pila
